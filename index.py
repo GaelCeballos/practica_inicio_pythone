@@ -1,5 +1,6 @@
-a= int(input("Ingresa un numero: "))
-b= int(input("Ingresa un numero: "))
-c= int(input("Ingresa un numero: "))
-print("El numero menor entre {}, {} y {} es: {}".format(a,b,c,min(a,b,c)))
-print("El número mas grande entre {}, {} y {} es: {}".format(a,b,c, max(a,b,c)))
+numero= int(input("Adivina un número del 1 al 10 "))
+num=5
+if numero==num:
+    print("has adivinado felcidades :)")
+else:
+    print("Fallaste ni modo para la otra mi chavo")
