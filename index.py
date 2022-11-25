@@ -1,6 +1,23 @@
-faren = float(input("Ingresa los grados Farenheit "))
-pesos = float(input("Ingresa la cantidad de pesos "))
-celsius= ((faren-32)*5/9)
-dolares = (pesos*20.3)
-print("La conversion de los grados farenheits {} a Celsius son: {}".format(faren, celsius))
-print("La conversión de pesos {} a dolares es: {}".format(pesos, dolares))
+dolar=20.3
+euro=20.5
+opcion = input("¿Qué deseas hacer ?:\n"
+                    "A- pesos a dolares\n"
+                    "B- pesos a euros\n"
+                    "C- dolares a pesos\n"
+                    "D- euros a pesos\n")
+
+if opcion == "a":
+    moneda = float(input("Pesos a dolares, Ingresa pesos"))
+    print("La conversion es: {}".format(moneda/dolar))
+elif opcion =="b":
+    moneda = float(input("pesos a euros, Ingresa pesos"))
+    print("La conversion es: {}".format(moneda/euro))
+elif opcion == "c":
+    moneda = float(input("dolares a pesos, Ingresa dolares"))
+    print("La conversion es: {}".format(moneda*dolar))
+elif opcion == "d":
+    moneda = float(input("euros a pesos, Ingresa euros"))
+    print("La conversion es: {}".format(moneda*euro))
+else:
+    print("Solo se puede ingresar la opcion a,b,c,d")
+    exit()
