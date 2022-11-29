@@ -1,4 +1,6 @@
 from random import randint
+import os
+
 
 vida_pikachu = 80
 vida_squirtle = 90
@@ -26,6 +28,12 @@ while vida_pi > 0 and vida_sq > 0 :
         print("Pikachu ha usado onda trueno")
         vida_sq -= 11
     
+    if vida_squirtle < 0 :
+        vida_squirtle = 0
+    
+    if vida_pikachu <0 :
+        vida_pikachu = 0
+    
     input("Enter para continuar....")
     print("Turno de squirtle... TU TURNO DE ATACAR")
     ataque_squirtle = input("Cual ataque deseas hacer [p] Placaje, [a] Pistola de agua y [b] Burbuja")
@@ -41,9 +49,17 @@ while vida_pi > 0 and vida_sq > 0 :
     else:
         print("Fallaste")
 
+    if vida_squirtle < 0 :
+        vida_squirtle = 0
+    
+    if vida_pikachu <0 :
+        vida_pikachu = 0
+
 if vida_pi > vida_sq :
     print("Pikachu Gana")
 else:
     print("Squirtle Gana")
+
+os.system("cls")
 
 
